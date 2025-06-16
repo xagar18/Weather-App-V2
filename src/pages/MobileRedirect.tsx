@@ -32,7 +32,7 @@ const MobileRedirect = () => {
 
         {/* Footer */}
         <div className="text-gray-600 text-xs">
-          Weather Nexus © 2024 • Built with ❤️ by Sagar
+          Weather Nexus © 2025 • Built with ❤️ by Sagar
         </div>
       </div>
     </div>
