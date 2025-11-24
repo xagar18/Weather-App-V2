@@ -1,5 +1,5 @@
 // OpenWeather API configuration
-const API_KEY = import.meta.env.VITE_WEATHER_API_KEY; 
+const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 
 export interface WeatherData {
@@ -15,10 +15,7 @@ export interface WeatherData {
   temperatureUnit: 'celsius' | 'fahrenheit';
 }
 
-export const fetchWeatherData = async (
-  city: string,
-  unit: 'celsius' | 'fahrenheit' = 'celsius',
-): Promise<WeatherData> => {
+export const fetchWeatherData = async (city, unit = 'celsius') => {
   try {
     const units = unit === 'fahrenheit' ? 'imperial' : 'metric';
     const response = await fetch(
@@ -49,8 +46,8 @@ export const fetchWeatherData = async (
   }
 };
 
-const mapWeatherIcon = (openWeatherIcon: string): string => {
-  const iconMap: { [key: string]: string } = {
+const mapWeatherIcon = (openWeatherIcon) => {
+  const iconMap = {
     '01d': 'sun',
     '01n': 'sun',
     '02d': 'cloud-sun',

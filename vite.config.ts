@@ -1,9 +1,8 @@
-import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
+import { defineConfig } from "vite";
 
 export default defineConfig(({ mode }) => ({
-  
   base: "/",
 
   server: {
@@ -11,24 +10,24 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
     watch: {
       ignored: [
-        '**/node_modules/**',
-        '**/.git/**',
-        '**/dist/**',
-        '**/build/**',
-        '**/.next/**',
-        '**/.nuxt/**',
-        '**/.vscode/**',
-        '**/.idea/**',
-        '**/coverage/**',
-        '**/.nyc_output/**',
-        '**/logs/**',
-        '**/*.log',
-        '**/tmp/**',
-        '**/temp/**'
+        "**/node_modules/**",
+        "**/.git/**",
+        "**/dist/**",
+        "**/build/**",
+        "**/.next/**",
+        "**/.nuxt/**",
+        "**/.vscode/**",
+        "**/.idea/**",
+        "**/coverage/**",
+        "**/.nyc_output/**",
+        "**/logs/**",
+        "**/*.log",
+        "**/tmp/**",
+        "**/temp/**",
       ],
       usePolling: false,
-      interval: 1000
-    }
+      interval: 1000,
+    },
   },
 
   plugins: [react()],
@@ -40,12 +39,6 @@ export default defineConfig(({ mode }) => ({
   },
 
   optimizeDeps: {
-    include: [
-      "react",
-      "react-dom",
-      "react-router-dom",
-      "@tanstack/react-query",
-      "lucide-react"
-    ]
-  }
+    include: ["react", "react-dom", "react-router-dom", "lucide-react"],
+  },
 }));
