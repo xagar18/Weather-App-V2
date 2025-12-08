@@ -184,7 +184,7 @@ const DesktopWallpaper = () => {
                   >
                     <div className="flex items-center space-x-4 text-xs">
                       <a
-                        href="https://sagarweb.site"
+                        href="https://sagaryadav.netlify.app"
                         target="_blank"
                         rel="noopener noreferrer"
                         className={`flex items-center space-x-1.5 ${
